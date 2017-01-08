@@ -11,12 +11,6 @@ module.exports = {
   },
 
   target: {
-    sortFn: (a, b) => {
-      // Sort function between two sunlight person objects.
-      if (a.chamber === 'senate') {
-        return -1;
-      }
-      return 1;
-    },
+    sortFn: (a) => a.chamber === 'senate' ? -1 : 1
   },
 };
